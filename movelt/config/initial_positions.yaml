@@ -1,0 +1,9 @@
+# Default initial positions for zlarm_description's ros2_control fake system
+
+initial_positions:
+  figger_joint1: 0
+  joint1: 0
+  joint2: 0
+  joint3: 0
+  joint4: 0
+  joint5: 0

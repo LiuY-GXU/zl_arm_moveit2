@@ -1,0 +1,511 @@
+<?xml version="1.0" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="zlarm_description">
+
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0221709604094146 0.00102061948183807 0.0209906897114635"
+        rpy="0 0 0" />
+      <mass
+        value="0.25175937001406" />
+      <inertia
+        ixx="0.000596688851983624"
+        ixy="-5.88114431217455E-08"
+        ixz="-2.45101826496541E-07"
+        iyy="0.000662550232630304"
+        iyz="-1.25369047340847E-07"
+        izz="0.00124145605836551" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link1">
+    <inertial>
+      <origin
+        xyz="3.73431542359526E-06 1.57764626503853E-05 0.0276157877783038"
+        rpy="0 0 0" />
+      <mass
+        value="0.0456406639502157" />
+      <inertia
+        ixx="1.21000561885726E-05"
+        ixy="-2.10785214842448E-12"
+        ixz="1.43366338603729E-09"
+        iyy="7.10552788256176E-06"
+        iyz="5.32187487279842E-09"
+        izz="7.9921342261645E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint1"
+    type="revolute">
+    <origin
+      xyz="-2.0792E-05 0 0.0525"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link2">
+    <inertial>
+      <origin
+        xyz="-0.0515 -0.00367569989994914 -1.11022302462516E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0150013816640669" />
+      <inertia
+        ixx="8.38686831853106E-06"
+        ixy="8.24505348156317E-21"
+        ixz="9.96420251562661E-20"
+        iyy="1.91552678825878E-05"
+        iyz="-4.01740606605407E-20"
+        izz="1.19562192175291E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.03865"
+      rpy="1.5708 1.5704 0" />
+    <parent
+      link="link1" />
+    <child
+      link="link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link3">
+    <inertial>
+      <origin
+        xyz="-0.0366499770037697 -0.000397974566436636 -0.000285684851574208"
+        rpy="0 0 0" />
+      <mass
+        value="0.0914301217869069" />
+      <inertia
+        ixx="1.61895735535747E-05"
+        ixy="7.79689527819437E-22"
+        ixz="7.41994732296582E-21"
+        iyy="2.48565411044368E-05"
+        iyz="-9.02388346632778E-11"
+        izz="1.48080036394588E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint3"
+    type="revolute">
+    <origin
+      xyz="-0.103 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link2" />
+    <child
+      link="link3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link4">
+    <inertial>
+      <origin
+        xyz="-0.0426707479899427 -0.00709612816109308 -0.000134058484138277"
+        rpy="0 0 0" />
+      <mass
+        value="0.0516933055416123" />
+      <inertia
+        ixx="1.21084331107011E-05"
+        ixy="-8.30263119962514E-07"
+        ixz="9.6017480874702E-10"
+        iyy="1.5761311041807E-05"
+        iyz="-7.89587080993816E-10"
+        izz="1.7190142915555E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint4"
+    type="revolute">
+    <origin
+      xyz="-0.0732999540075392 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link3" />
+    <child
+      link="link4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link5">
+    <inertial>
+      <origin
+        xyz="1.20314494200802E-08 1.49244971936469E-08 -0.000575227732471761"
+        rpy="0 0 0" />
+      <mass
+        value="0.000646644487863901" />
+      <inertia
+        ixx="1.55888144531973E-08"
+        ixy="7.76125316985978E-18"
+        ixz="-2.99138207885228E-13"
+        iyy="1.5588814456568E-08"
+        iyz="-3.71068181914057E-13"
+        izz="2.98907164206809E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/link5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint5"
+    type="revolute">
+    <origin
+      xyz="-0.0682243933179387 0.0023018729714997 -0.000134875345940033"
+      rpy="-1.57082231078953 0.00184650979107542 1.5567252968918" />
+    <parent
+      link="link4" />
+    <child
+      link="link5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="gripper_base_link">
+    <inertial>
+      <origin
+        xyz="-0.0616934486513835 0.000985771191585209 1.54427206379149E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0218218515622906" />
+      <inertia
+        ixx="4.89294487346846E-06"
+        ixy="2.04476389850048E-08"
+        ixz="5.31851726888672E-09"
+        iyy="5.05197711598414E-06"
+        iyz="3.26752375952789E-10"
+        izz="2.18440311673384E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/gripper_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/gripper_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gripper_base_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.080242"
+      rpy="-1.5726 -1.5567 3.1416" />
+    <parent
+      link="link5" />
+    <child
+      link="gripper_base_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="figger_link1">
+    <inertial>
+      <origin
+        xyz="-0.0296361699785966 0.00261215342632353 -0.00725948435649681"
+        rpy="0 0 0" />
+      <mass
+        value="0.00821304889372135" />
+      <inertia
+        ixx="7.07712297673231E-07"
+        ixy="3.26464854837125E-08"
+        ixz="-9.87706425447697E-08"
+        iyy="8.22613743330352E-07"
+        iyz="-2.18760529626971E-08"
+        izz="6.2075307057772E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/figger_link1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/figger_link1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="figger_joint1"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.080242"
+      rpy="-1.5726 -1.5567 3.1416" />
+    <parent
+      link="link5" />
+    <child
+      link="figger_link1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0.025"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="figger_link2">
+    <inertial>
+      <origin
+        xyz="-0.0297038620665552 -0.00218789089870593 0.00700953553927919"
+        rpy="0 0 0" />
+      <mass
+        value="0.008213049128757" />
+      <inertia
+        ixx="7.05969187102707E-07"
+        ixy="-2.93680676575521E-08"
+        ixz="9.81158437182552E-08"
+        iyy="8.2435683330745E-07"
+        iyz="-2.4724672630761E-08"
+        izz="6.20753063153987E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/figger_link2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://zlarm_description/meshes/figger_link2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="figger_joint2"
+    type="prismatic">
+    <origin
+      xyz="0 0 0.080242"
+      rpy="-1.5726 -1.5567 3.1416" />
+    <parent
+      link="link5" />
+    <child
+      link="figger_link2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.025"
+      upper="0"
+      effort="0"
+      velocity="0" />
+    <mimic
+      joint="figger_joint1"
+      multiplier="-1"
+      offset="0" />
+  </joint>
+</robot>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:macro name="zlarm_description_ros2_control" params="name initial_positions_file">
+       <xacro:property name="initial_positions" value="${xacro.load_yaml(initial_positions_file)['initial_positions']}"/>
+
+        <ros2_control name="Arm" type="system">
+            <hardware>
+                <!-- By default, set up controllers for simulation. This won't work on real hardware -->
+                <plugin>arm_hardware/ArmHardwareInterface</plugin>
+                <param name ="joint1_motor_id">0</param>;
+                <param name ="joint2_motor_id">1</param>;
+                <param name ="joint3_motor_id">2</param>;
+                <param name ="joint4_motor_id">3</param>;
+                <param name ="joint5_motor_id">4</param>;
+                <param name ="figger_joint_id">5</param>;
+                <param name ="port_name">/dev/ttyUSB0</param>;
+                <param name = "servo_release">$(arg servo_release)</param>
+            </hardware>
+            <joint name="joint1">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint1']}</param>
+                </state_interface>
+            </joint>
+            <joint name="joint2">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint2']}</param>
+                </state_interface>
+            </joint>
+            <joint name="joint3">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint3']}</param>
+                </state_interface>
+            </joint>
+            <joint name="joint4">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint4']}</param>
+                </state_interface>
+            </joint>
+            <joint name="joint5">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['joint5']}</param>
+                </state_interface>
+            </joint>
+            <joint name="figger_joint1">
+                <command_interface name="position"/>
+                <state_interface name="position">
+                  <param name="initial_value">${initial_positions['figger_joint1']}</param>
+                </state_interface>
+            </joint>
+
+        </ros2_control>
+    </xacro:macro>
+</robot>

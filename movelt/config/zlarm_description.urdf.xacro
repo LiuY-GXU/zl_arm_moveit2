@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zlarm_description">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+    <!-- Import zlarm_description urdf file -->
+    <xacro:include filename="$(find zlarm_description)/urdf/zlarm_description.urdf.xacro" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="zlarm_description.ros2_control.xacro" />
+
+
+    <xacro:zlarm_description_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

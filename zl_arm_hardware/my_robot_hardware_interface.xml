@@ -1,0 +1,9 @@
+<library path="zl_arm_hardware">
+    <class name = "arm_hardware/ArmHardwareInterface"
+            type = "arm_hardware::ArmHardwareInterface"
+            base_class_type = "hardware_interface::SystemInterface">
+            <description>
+                the hardware_interface of arm
+            </description>
+    </class>
+</library>

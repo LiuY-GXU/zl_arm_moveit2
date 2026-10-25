@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="my_robot">
+    <xacro:arg name="servo_release" default="false" />
+    <xacro:include filename="$(find zlarm_description)/urdf/zlarm_description.urdf.xacro"/>
+    <xacro:include filename="$(find zlarm_description)/urdf/zlarm_description.ros2_control.xacro"/>
+
+    <xacro:zlarm_description_ros2_control name="zl_arm_controller" initial_positions_file="$(find movelt)/config/initial_positions.yaml"/>
+
+</robot>
