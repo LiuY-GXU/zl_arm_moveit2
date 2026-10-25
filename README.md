@@ -1,2 +1,2 @@
 # zl_arm_moveit2
-这是开源众灵总线舵机部署moveit2的项目，里面包含了众灵舵机与ros2control通信的头文件，还有我画的sw文件，另外我使用了不35
+这是开源众灵总线舵机部署moveit2的项目，里面包含了众灵舵机与ros2control通信的头文件，还有我画的sw文件，另外我使用了d435i搭配easy_handeye2进行了标定
