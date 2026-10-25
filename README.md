@@ -7,7 +7,7 @@
 
 进入zlarm_ws/src/movelt/launch之后，运行demo.launch.py可以使用moveit2控制机械臂，另外选择start_all_for_biaoding.py可以在机械臂泻力进行标定，start_up_all.launch.py则可以在moveit2控制之下进行标定，另外添加tf关系则可以显示aruco此时在base坐标系中的位置
 
-在zlarm_ws/src/my_cpp_commander/src里面则是moveit2的相关api，另外
+在zlarm_ws/src/my_cpp_commander/src里面则是moveit2的相关api
 
 
 
