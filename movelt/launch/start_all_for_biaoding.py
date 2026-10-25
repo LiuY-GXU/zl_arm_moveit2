@@ -27,7 +27,7 @@ def generate_launch_description():
     # 2. MoveIt (机械臂控制)
     moveit_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
-            os.path.join(movelt_dir, 'launch', 'demo.launch.py')
+            os.path.join(zlarm_descriptionc, 'launch', 'zl_arm_hardware.launch.py')
         )
     )
 
