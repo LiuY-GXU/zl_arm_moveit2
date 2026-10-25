@@ -1,9 +1,7 @@
 # zl_arm_moveit2
 这是开源众灵总线舵机部署moveit2的项目，里面包含了众灵舵机与ros2control通信的头文件，还有我画的sw文件，另外我使用了d435i搭配easy_handeye2进行了标定，但是限制于这是一个5轴机械臂很多时候无法成功逆解，故没有实现抓取功能
 
-###代码：
-  cd zlarm_arm
-  colcon build
+###进入到这个工作空间后colcon build即可使用
 
 在zl_arm_hardware/include/zl_arm_hardware 下面是众灵舵机的通信头文件，接口头文件，在src/ 下面则是对应的cpp文件，另外有个测试文件是留给大家测试舵机使用的，在舵机的sdk文件里有很多的测试函数供给大家调用，请注意不要更改任何的延迟函数，不然舵机无法承受更高频率的读写操作。
 
