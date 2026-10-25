@@ -3,7 +3,14 @@
 
 在zl_arm_hardware/include/zl_arm_hardware 下面是众灵舵机的通信头文件，接口头文件，在src/ 下面则是对应的cpp文件，另外有个测试文件是留给大家测试舵机使用的，在舵机的sdk文件里有很多的测试函数供给大家调用，请注意不要更改任何的延迟函数，不然舵机无法承受更高频率的读写操作。
 
-在
-![Uploading image.png…]()
+进入zlarm_ws/src/zlarm_description/launch，运行zl_arm_hardware.launch.py文件可以在rviz2中显示真机此时的各个关节状态，另外机械臂处于泻力状态
+
+进入zlarm_ws/src/movelt/launch之后，运行demo.launch.py可以使用moveit2控制机械臂，另外选择start_all_for_biaoding.py可以在机械臂泻力进行标定，start_up_all.launch.py则可以在moveit2控制之下进行标定，另外添加tf关系则可以显示aruco此时在base坐标系中的位置
+
+在zlarm_ws/src/my_cpp_commander/src里面则是moveit2的相关api，另外
+
+
+
+
 
   
